@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(68, 34, 130);
+}
+
+.content {
+    display: flex;
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 8px;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: rgb(255, 80, 109);
+    color: rgb(0, 255, 242);
+}
