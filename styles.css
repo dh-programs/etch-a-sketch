@@ -2,13 +2,43 @@ body {
     background-color: rgb(68, 34, 130);
 }
 
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+}
+
+.header {
+    display: flex;
+    background-color: blanchedalmond;
+    font-size: 30px;
+}
+
 .content {
     display: flex;
-    max-width: 960px;
+    flex-shrink: 0;
+    justify-content: center;
     margin: 0px auto;
-    padding: 8px;
-    border-radius: 20px;
-    border-style: groove;
+    border-width: 5px;
+    border-style: dashed;
     border-color: rgb(255, 80, 109);
     color: rgb(0, 255, 242);
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    flex-shrink: 0; 
+    height: 460px;
+    width: 460px;
+    max-width: 460px;
+}
+
+.grid {
+    box-sizing: border-box;
+    background-color: white;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
 }
