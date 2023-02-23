@@ -5,6 +5,7 @@ body {
 .main {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin: 0px auto;
 }
 
@@ -14,10 +15,12 @@ body {
     font-size: 30px;
 }
 
-.content {
+.grid-content {
     display: flex;
+    flex: 1;
     flex-shrink: 0;
     justify-content: center;
+    align-items: center;
     margin: 0px auto;
     border-width: 5px;
     border-style: dashed;
@@ -26,19 +29,19 @@ body {
 }
 
 #grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    flex-shrink: 0; 
+    display: grid;
     height: 460px;
     width: 460px;
     max-width: 460px;
+    max-height: 460px;
+    column-gap: 0px;
+    row-gap: 0px;
 }
 
-.grid {
+.grid-boxes {
     box-sizing: border-box;
     background-color: white;
     border-style: solid;
-    border-color: gray;
+    border-color: rgb(165, 165, 165);
     border-width: 1px;
 }
