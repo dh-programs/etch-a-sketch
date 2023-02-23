@@ -1,10 +1,10 @@
 const gridContainer = document.querySelector('#grid-container');
 
 function createGrid(rowSize) {
-    gridContainer.style.gridTemplateColumns = (`repeat(${rowSize}, 1fr)`);
-    gridContainer.style.gridTemplateRows = (`repeat(${rowSize}, 1fr)`);
+    gridContainer.style.gridTemplateColumns = `repeat(${rowSize}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${rowSize}, 1fr)`;
     let gridContainerSize = gridContainer.offsetWidth;
-    let boxSize = Math.round(gridContainerSize / rowSize) - 1;
+    let boxSize = (gridContainerSize / rowSize) - 1;
     let boxSizePx = `${boxSize}px`;
     for (let i = 0; i < rowSize * rowSize; i++) {
         let divBox = document.createElement('div');
@@ -18,4 +18,4 @@ function createGrid(rowSize) {
     }
 }
 
-createGrid(13);
+createGrid(16);
