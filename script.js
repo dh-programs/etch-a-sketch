@@ -61,9 +61,12 @@ function setFillColorBlack() {
     fillColor = 'black';
 }
 
-// choose from array of pastels
+let pastelColors = ['rgb(204,238,255)', 'rgb(204,255,230)', 'rgb(255,230,179)', 'rgb(255,212,204)', 'rgb(255,230,242)', 'rgb(230,204,255)', 'rgb(204,255,212)', 'rgb(255,247,204)'];
+let vividColors = ['rgb(255,204,102)', 'rgb(179,255,102)', 'rgb(102,255,179)', 'rgb(102,255,255)', 'rgb(102,204,255)', 'rgb(102,153,255)', 'rgb(179,102,255)', 'rgb(255,128,255)'];
+
 function setFillColorVivids() {
-    fillColor = 'rgb(0, 255, 242)';
+    let i = Math.floor(Math.random() * vividColors.length);
+    fillColor = `${vividColors[i]}`;
 }
 
 function setFillColorPastels() {
