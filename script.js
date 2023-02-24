@@ -49,10 +49,10 @@ function clearGrid() {
 
 function toggleGridLines() {
     gridBoxes.forEach(gridBox => {
-        if (gridBox.style.borderWidth === '1px') {
-            gridBox.style.borderWidth = '0px';
-        } else {
+        if (gridBox.style.borderWidth === '0px') {
             gridBox.style.borderWidth = '1px';
+        } else {
+            gridBox.style.borderWidth = '0px';
         }
     });
 }
@@ -70,5 +70,6 @@ function setFillColorVivids() {
 }
 
 function setFillColorPastels() {
-    fillColor = 'rgb(255, 150, 168)';
+    let i = Math.floor(Math.random() * pastelColors.length);
+    fillColor = `${pastelColors[i]}`;
 }
