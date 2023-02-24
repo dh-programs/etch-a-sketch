@@ -30,7 +30,7 @@ const gridLineButton = document.querySelector('#btn-grid-line');
 gridLineButton.addEventListener('click', toggleGridLines);
 
 let fillColor = 'black';
-const blackButton = document.querySelector('#btn-black-white');
+const blackButton = document.querySelector('#btn-black');
 blackButton.addEventListener('click', setFillColorBlack);
 
 const vividsButton = document.querySelector('#btn-vivids');

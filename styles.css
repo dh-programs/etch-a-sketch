@@ -3,18 +3,23 @@
     src: url(fonts/RubikGlitch-Regular.ttf);
 }
 
+@font-face {
+    font-family: BlakaHollow;
+    src: url(fonts/BlakaHollow-Regular.ttf);
+}
+
 body {
     height: 100vh;
     margin: 0;
-    font-family: RubikGlitch;
-    background: linear-gradient(rgb(255, 166, 0), coral, rgb(218, 45, 123), rgb(154, 35, 181), rgb(82, 59, 124), rgb(67, 17, 159));    
+    font-family: BlakaHollow;
+    background: linear-gradient(to bottom right, rgb(228, 148, 0), rgb(231, 104, 58), rgb(197, 43, 112), rgb(154, 35, 181), rgb(67, 17, 159));   
 }
 
 button {
-    font-family: RubikGlitch;
-    font-size: 20px;
-    color: rgb(255, 80, 109);
-    background-color: rgba(0, 255, 230);
+    font-family: BlakaHollow;
+    font-size: 28px;
+    color: rgb(147, 255, 225);
+    background-color: rgba(0, 221, 255, 0);
     padding: 20px;
     margin: 10px;
     border-radius: 50px;
@@ -38,8 +43,8 @@ button:hover {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color:rgb(255, 80, 109);
-    font-size: 30px;
+    color:rgb(127, 24, 108);
+    font-size: 44px;
     padding: 10px;
     margin-left: 100px;
 }
@@ -51,8 +56,8 @@ button:hover {
 
 .title {
     display: flex;
-    font-size: 60px;
-    color: rgba(0, 255, 230);
+    font-size: 70px;
+    color: rgb(147, 255, 225);
 }
 
 .content {
@@ -68,8 +73,9 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 5px rgba(255, 166, 0, 0.742) groove;
-    background: linear-gradient(rgb(255, 166, 0), coral, rgb(218, 45, 123), rgb(154, 35, 181), rgb(82, 59, 124), rgb(67, 17, 159));
+    border: 3px rgba(255, 12, 109, 0.9) groove;
+    background: linear-gradient(to bottom right, rgb(231, 104, 58), rgb(197, 43, 112), rgb(154, 35, 181), rgb(67, 17, 159));
+
 }
 
 #grid-container {
