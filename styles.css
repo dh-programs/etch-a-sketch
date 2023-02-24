@@ -7,16 +7,17 @@ body {
     height: 100vh;
     margin: 0;
     font-family: RubikGlitch;
-    background-color: rgb(82, 59, 124);
+    background: linear-gradient(rgb(255, 166, 0), coral, rgb(218, 45, 123), rgb(154, 35, 181), rgb(82, 59, 124), rgb(67, 17, 159));    
 }
 
 button {
     font-family: RubikGlitch;
     font-size: 20px;
     color: rgb(255, 80, 109);
-    background-color: aqua;
+    background-color: rgba(0, 255, 230);
     padding: 20px;
     margin: 10px;
+    border-radius: 50px;
 }
 
 button:hover {
@@ -51,7 +52,7 @@ button:hover {
 .title {
     display: flex;
     font-size: 60px;
-    color: rgb(0, 255, 242);;
+    color: rgba(0, 255, 230);
 }
 
 .content {
@@ -67,8 +68,8 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 5px rgb(93, 71, 133) groove;
-    background-color: rgb(106, 81, 151);
+    border: 5px rgba(255, 166, 0, 0.742) groove;
+    background: linear-gradient(rgb(255, 166, 0), coral, rgb(218, 45, 123), rgb(154, 35, 181), rgb(82, 59, 124), rgb(67, 17, 159));
 }
 
 #grid-container {
