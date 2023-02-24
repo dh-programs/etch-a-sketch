@@ -1,9 +1,4 @@
 @font-face {
-    font-family: RubikGlitch;
-    src: url(fonts/RubikGlitch-Regular.ttf);
-}
-
-@font-face {
     font-family: BlakaHollow;
     src: url(fonts/BlakaHollow-Regular.ttf);
 }
@@ -27,13 +22,21 @@ button {
 
 button:hover {
     opacity: .7;
+    background-color: rgb(103, 4, 134);
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
     display: flex;
     justify-content: space-evenly;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0px auto;
     border: 0px rgb(255, 80, 109) dotted;
     box-sizing: border-box;
 }
@@ -43,15 +46,14 @@ button:hover {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color:rgb(127, 24, 108);
-    font-size: 44px;
-    padding: 10px;
-    margin-left: 100px;
+    color:rgb(97, 4, 75);
+    font-size: 28px;
 }
 
 .options {
     display: flex;
     flex-direction: column;
+    margin: 0px;
 }
 
 .title {
@@ -62,10 +64,10 @@ button:hover {
 
 .content {
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-right: 100px;
 }
 
 .grid-wrapper {
@@ -75,7 +77,6 @@ button:hover {
     padding: 10px;
     border: 3px rgba(255, 12, 109, 0.9) groove;
     background: linear-gradient(to bottom right, rgb(231, 104, 58), rgb(197, 43, 112), rgb(154, 35, 181), rgb(67, 17, 159));
-
 }
 
 #grid-container {
@@ -95,7 +96,7 @@ button:hover {
     min-height: 100%;
     max-height: 100%;
     border-style: solid;
-    border-color: rgba(47, 47, 47, 0.041);
+    border-color: rgba(47, 47, 47, 0.106);
     border-width: 1px;
 }
 

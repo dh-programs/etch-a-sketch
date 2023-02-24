@@ -29,18 +29,33 @@ clearButton.addEventListener('click', clearGrid);
 const gridLineButton = document.querySelector('#btn-grid-line');
 gridLineButton.addEventListener('click', toggleGridLines);
 
-let fillColor = 'black';
+let blackSelected = false;
 const blackButton = document.querySelector('#btn-black');
 blackButton.addEventListener('click', setFillColorBlack);
 
+let vividsSelected = false;
 const vividsButton = document.querySelector('#btn-vivids');
 vividsButton.addEventListener('click', setFillColorVivids);
 
+let pastelsSelected = false;
 const pastelsButton = document.querySelector('#btn-pastels');
 pastelsButton.addEventListener('click', setFillColorPastels);
 
+let eraserSelected = false;
+const eraserButton = document.querySelector('#btn-eraser');
+eraserButton.addEventListener('click', setFillColorWhite);
+
 function gridFill() {
-    this.style.backgroundColor = fillColor;
+    if (pastelsSelected === true) {
+        this.style.backgroundColor = setFillColorPastels();
+        console.log(setFillColorPastels());
+    } else if (vividsSelected === true) {
+        this.style.backgroundColor = setFillColorVivids();
+    } else if (blackSelected === true) {
+        this.style.backgroundColor = setFillColorBlack();
+    } else if (eraserSelected === true) {
+        this.style.backgroundColor = setFillColorWhite();
+    } else this.style.backgroundColor = 'black';
 }
 
 function clearGrid() {
@@ -57,19 +72,43 @@ function toggleGridLines() {
     });
 }
 
-function setFillColorBlack() {
-    fillColor = 'black';
-}
-
 let pastelColors = ['rgb(204,238,255)', 'rgb(204,255,230)', 'rgb(255,230,179)', 'rgb(255,212,204)', 'rgb(255,230,242)', 'rgb(230,204,255)', 'rgb(204,255,212)', 'rgb(255,247,204)'];
-let vividColors = ['rgb(255,204,102)', 'rgb(179,255,102)', 'rgb(102,255,179)', 'rgb(102,255,255)', 'rgb(102,204,255)', 'rgb(102,153,255)', 'rgb(179,102,255)', 'rgb(255,128,255)'];
+let vividColors = ['rgb(255,204,102)', 'rgb(179,255,102)', 'rgb(102,255,179)', 'rgb(102,255,255)', 'rgb(102,204,255)', 'rgb(102,153,255)', 'rgb(179,102,255)', 'rgb(255,128,255)', 'rgb(255,106,77)'];
 
 function setFillColorVivids() {
     let i = Math.floor(Math.random() * vividColors.length);
     fillColor = `${vividColors[i]}`;
+    vividsSelected = true;
+    blackSelected = false;
+    pastelsSelected = false;
+    eraserSelected = false;
+    return fillColor;
 }
 
 function setFillColorPastels() {
     let i = Math.floor(Math.random() * pastelColors.length);
     fillColor = `${pastelColors[i]}`;
+    pastelsSelected = true;
+    blackSelected = false;
+    vividsSelected = false;
+    eraserSelected = false;
+    return fillColor;
+}
+
+function setFillColorBlack() {
+    fillColor = 'black';
+    blackSelected = true;
+    pastelsSelected = false;
+    vividsSelected = false;
+    eraserSelected = false;
+    return fillColor;
+}
+
+function setFillColorWhite() {
+    fillColor = 'white';
+    eraserSelected = true;
+    blackSelected = false;
+    pastelsSelected = false;
+    vividsSelected = false;
+    return fillColor;
 }
