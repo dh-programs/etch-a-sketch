@@ -4,7 +4,6 @@
 }
 
 body {
-    height: 100vh;
     margin: 0;
     font-family: BlakaHollow;
     background: linear-gradient(to bottom right, rgb(228, 148, 0), rgb(231, 104, 58), rgb(197, 43, 112), rgb(154, 35, 181), rgb(67, 17, 159));   
@@ -25,18 +24,30 @@ button:hover {
     background-color: rgb(103, 4, 134);
 }
 
+#btn-slider:hover {
+    opacity: 1;
+    background-color: rgba(104, 4, 134, 0);
+}
+
+#btn-color-picker:hover {
+    opacity: 1;
+    background-color: rgba(104, 4, 134, 0);
+}
+
 .slider {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 24px;
+    padding: 15px;
+    color: rgb(147, 255, 225);
 }
 
 .main {
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
+    height: 97vh;
     margin: 0px auto;
     border: 0px rgb(255, 80, 109) dotted;
     box-sizing: border-box;
@@ -45,8 +56,9 @@ button:hover {
 .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:flex-end;
     align-items: center;
+    padding-bottom: 80px;
     color:rgb(97, 4, 75);
 }
 
@@ -54,6 +66,15 @@ button:hover {
     display: flex;
     flex-direction: column;
     margin: 0px;
+}
+
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: rgb(147, 255, 225);
+    padding: 10px;
 }
 
 .title {
@@ -102,4 +123,12 @@ button:hover {
 
 .grid-boxes:hover {
     opacity: .5;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3vh;
+    color: white;
 }

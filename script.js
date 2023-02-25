@@ -16,12 +16,23 @@ function createGrid(rowSize) {
         divBox.style.maxHeight = boxSizePx;
         gridContainer.append(divBox);
     }
+    const gridBoxes = document.querySelectorAll('.grid-boxes');
+    gridBoxes.forEach(gridBox => gridBox.addEventListener('mouseover', gridFill));
+}
+
+function removeGrid() {
+    gridContainer.textContent = '';
 }
 
 createGrid(16);
 
-const gridBoxes = document.querySelectorAll('.grid-boxes');
-gridBoxes.forEach(gridBox => gridBox.addEventListener('mouseover', gridFill));
+function getSliderVal() {
+    removeGrid();
+    createGrid(this.value);
+}
+
+const gridSlider = document.querySelector('#grid-slider');
+gridSlider.addEventListener('mouseup', getSliderVal);
 
 const clearButton = document.querySelector('#btn-clear-grid');
 clearButton.addEventListener('click', clearGrid);
@@ -45,24 +56,31 @@ let eraserSelected = false;
 const eraserButton = document.querySelector('#btn-eraser');
 eraserButton.addEventListener('click', setFillColorWhite);
 
+//let customSelected = false;
+//const colorPicker = document.querySelector('.color-picker');
+//colorPicker.addEventListener('input', setFillColorCustom);
+
 function gridFill() {
     if (pastelsSelected === true) {
         this.style.backgroundColor = setFillColorPastels();
-        console.log(setFillColorPastels());
     } else if (vividsSelected === true) {
         this.style.backgroundColor = setFillColorVivids();
     } else if (blackSelected === true) {
         this.style.backgroundColor = setFillColorBlack();
     } else if (eraserSelected === true) {
         this.style.backgroundColor = setFillColorWhite();
-    } else this.style.backgroundColor = 'black';
+    } /*else if (customSelected === true) {
+        this.style.backgroundColor = setFillColorCustom();
+    }*/ else this.style.backgroundColor = setFillColorBlack();
 }
 
 function clearGrid() {
+    const gridBoxes = document.querySelectorAll('.grid-boxes');
     gridBoxes.forEach(gridBox => gridBox.style.backgroundColor = 'white');
 }
 
 function toggleGridLines() {
+    const gridBoxes = document.querySelectorAll('.grid-boxes');
     gridBoxes.forEach(gridBox => {
         if (gridBox.style.borderWidth === '0px') {
             gridBox.style.borderWidth = '1px';
@@ -77,7 +95,7 @@ let vividColors = ['rgb(255,204,102)', 'rgb(179,255,102)', 'rgb(102,255,179)', '
 
 function setFillColorVivids() {
     let i = Math.floor(Math.random() * vividColors.length);
-    fillColor = `${vividColors[i]}`;
+    let fillColor = `${vividColors[i]}`;
     vividsSelected = true;
     blackSelected = false;
     pastelsSelected = false;
@@ -87,7 +105,7 @@ function setFillColorVivids() {
 
 function setFillColorPastels() {
     let i = Math.floor(Math.random() * pastelColors.length);
-    fillColor = `${pastelColors[i]}`;
+    let fillColor = `${pastelColors[i]}`;
     pastelsSelected = true;
     blackSelected = false;
     vividsSelected = false;
@@ -96,7 +114,7 @@ function setFillColorPastels() {
 }
 
 function setFillColorBlack() {
-    fillColor = 'black';
+    let fillColor = 'black';
     blackSelected = true;
     pastelsSelected = false;
     vividsSelected = false;
@@ -105,10 +123,29 @@ function setFillColorBlack() {
 }
 
 function setFillColorWhite() {
-    fillColor = 'white';
+    let fillColor = 'white';
     eraserSelected = true;
     blackSelected = false;
     pastelsSelected = false;
     vividsSelected = false;
     return fillColor;
 }
+
+/*
+function setFillColorCustom() {
+    //var x = document.getElementById("myColor").value; 
+    //let fillColor = ;
+
+    const colorPicker = document.querySelector('.color-picker');
+    colorPicker.addEventListener('input', setFillColorCustom);
+
+    let fillColor = `${colorPicker.value}`;
+    console.log(fillColor);
+    customSelected = true;
+    eraserSelected = false;
+    blackSelected = false;
+    pastelsSelected = false;
+    vividsSelected = false;
+    return fillColor;
+}
+*/
