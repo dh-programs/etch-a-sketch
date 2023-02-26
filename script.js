@@ -56,9 +56,9 @@ let eraserSelected = false;
 const eraserButton = document.querySelector('#btn-eraser');
 eraserButton.addEventListener('click', setFillColorWhite);
 
-//let customSelected = false;
-//const colorPicker = document.querySelector('.color-picker');
-//colorPicker.addEventListener('input', setFillColorCustom);
+let customSelected = false;
+const colorPicker = document.querySelector('#color-choice');
+colorPicker.addEventListener('change', setFillColorCustom);
 
 function gridFill() {
     if (pastelsSelected === true) {
@@ -69,9 +69,9 @@ function gridFill() {
         this.style.backgroundColor = setFillColorBlack();
     } else if (eraserSelected === true) {
         this.style.backgroundColor = setFillColorWhite();
-    } /*else if (customSelected === true) {
+    } else if (customSelected === true) {
         this.style.backgroundColor = setFillColorCustom();
-    }*/ else this.style.backgroundColor = setFillColorBlack();
+    } else this.style.backgroundColor = setFillColorBlack();
 }
 
 function clearGrid() {
@@ -100,6 +100,7 @@ function setFillColorVivids() {
     blackSelected = false;
     pastelsSelected = false;
     eraserSelected = false;
+    customSelected = false;
     return fillColor;
 }
 
@@ -110,6 +111,7 @@ function setFillColorPastels() {
     blackSelected = false;
     vividsSelected = false;
     eraserSelected = false;
+    customSelected = false;
     return fillColor;
 }
 
@@ -119,6 +121,7 @@ function setFillColorBlack() {
     pastelsSelected = false;
     vividsSelected = false;
     eraserSelected = false;
+    customSelected = false;
     return fillColor;
 }
 
@@ -128,19 +131,12 @@ function setFillColorWhite() {
     blackSelected = false;
     pastelsSelected = false;
     vividsSelected = false;
+    customSelected = false;
     return fillColor;
 }
 
-/*
 function setFillColorCustom() {
-    //var x = document.getElementById("myColor").value; 
-    //let fillColor = ;
-
-    const colorPicker = document.querySelector('.color-picker');
-    colorPicker.addEventListener('input', setFillColorCustom);
-
     let fillColor = `${colorPicker.value}`;
-    console.log(fillColor);
     customSelected = true;
     eraserSelected = false;
     blackSelected = false;
@@ -148,4 +144,3 @@ function setFillColorCustom() {
     vividsSelected = false;
     return fillColor;
 }
-*/

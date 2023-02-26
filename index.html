@@ -10,28 +10,30 @@
 
     <body>
         <script src="script.js" defer></script>
-        <div class="main">
-            <div class="sidebar">
-                <div class="options" id="left-menu">
-                    <button id="btn-color-picker"><div class="color-picker">choose color<input type="color"></div></button>
-                    <button id="btn-black">black</button>
-                    <button id="btn-pastels">pastels</button>
-                    <button id="btn-vivids">vivids</button>
+        
+            <div class="main">
+                <div class="sidebar">
+                    <div class="options" id="left-menu">
+                        <button id="btn-color-picker"><div class="color-picker">choose color<input id="color-choice" type="color"></div></button>
+                        <button id="btn-black">black</button>
+                        <button id="btn-pastels">pastels</button>
+                        <button id="btn-vivids">vivids</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sidebar">
-                <div class="options">
-                    <button id="btn-slider"><div class="slider">Select grid size<input type="range" min="9" max="50" value="16" id="grid-slider"></div></button>
-                    <button id="btn-grid-line">toggle grid lines</button>
-                    <button id="btn-clear-grid">clear grid</button>
-                    <button id="btn-eraser">eraser</button>
+                <div class="sidebar">
+                    <div class="options">
+                        <button id="btn-slider"><div class="slider">Select grid size<input type="range" min="9" max="50" value="16" id="grid-slider"></div></button>
+                        <button id="btn-grid-line">toggle grid lines</button>
+                        <button id="btn-clear-grid">clear grid</button>
+                        <button id="btn-eraser">eraser</button>
+                    </div>
                 </div>
+                <div class="content">
+                    <div class="title">Etch-a-sketch</div>
+                    <div class="grid-wrapper"><div id="grid-container"></div></div>
+                </div>
+            
             </div>
-            <div class="content">
-                <div class="title">Etch-a-sketch</div>
-                <div class="grid-wrapper"><div id="grid-container"></div></div>
-            </div>
-        </div>
-        <div class="footer">FOOTER</div>
+            <div class="footer">FOOTER</div>
     </body>
 </html>
