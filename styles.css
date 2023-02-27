@@ -14,7 +14,7 @@ button {
     font-size: 28px;
     color: rgb(147, 255, 225);
     background-color: rgba(0, 221, 255, 0);
-    padding: 20px;
+    padding: 15px;
     margin: 10px;
     border-radius: 50px;
 }
@@ -47,7 +47,7 @@ button:hover {
 .main {
     display: flex;
     justify-content: space-evenly;
-    height: 97vh;
+    padding: 60px;
     margin: 0px auto;
     border: 0px rgb(255, 80, 109) dotted;
     box-sizing: border-box;
@@ -58,7 +58,7 @@ button:hover {
     flex-direction: column;
     justify-content:flex-end;
     align-items: center;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
     color:rgb(97, 4, 75);
 }
 
@@ -80,6 +80,8 @@ button:hover {
 .title {
     display: flex;
     font-size: 70px;
+    box-sizing: border-box;
+    padding: 10px;
     color: rgb(147, 255, 225);
 }
 
@@ -87,8 +89,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin-right: 100px;
+    justify-content: space-evenly; 
 }
 
 .grid-wrapper {
@@ -128,7 +129,13 @@ button:hover {
 .footer {
     display: flex;
     justify-content: center;
-    height: 3vh;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
     color: white;
 }
