@@ -59,6 +59,7 @@ eraserButton.addEventListener('click', setFillColorWhite);
 let customSelected = false;
 const colorPicker = document.querySelector('#color-choice');
 colorPicker.addEventListener('change', setFillColorCustom);
+colorPicker.addEventListener('click', setFillColorCustom);
 
 function gridFill() {
     if (pastelsSelected === true) {
@@ -143,4 +144,8 @@ function setFillColorCustom() {
     pastelsSelected = false;
     vividsSelected = false;
     return fillColor;
+}
+
+function customTrue() {
+    customSelected = true;
 }
